@@ -7,7 +7,7 @@ Provides the $node helper service to directives for easy access to DOM Elements 
 To use, add the `ng-node` attribute to the desired HTML Elements and pass the desired $node property name as value.
 For example, using `ng-node="btnCancel` will make `$node.btnCancel` available on the service for the directive.
 
-Improves mainainability and readibility.
+Improves mainainability and readibility. Helps leave out redundant DOM queries.
 
 __HTML__
 
