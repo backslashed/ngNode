@@ -19,7 +19,7 @@ angular.module('ngNode').service('$node', function() {
          * @param element {angular.element} DOM Node wrapped in jQLite
          * @private
          */
-        _registerElement: function(name, element) {
+        _register: function(name, element) {
             this[name] = element;
         },
 
@@ -28,7 +28,7 @@ angular.module('ngNode').service('$node', function() {
          * @param name {String} Key represeting DOM Node
          * @private
          */
-        _unregisterElement: function(name) {
+        _unregister: function(name) {
             delete this[name];
         }
     };
@@ -43,9 +43,9 @@ angular.module('ngNode').directive('ngNode', ['$node', function($node) {
         restrict: 'A',
 
         link: function(scope, elem, attr) {
-            $node._registerElement(attr.ngNode, elem);
+            $node._register(attr.ngNode, elem);
             scope.$on('$destroy', function() {
-                $node._unregisterElement(attr.ngNode);
+                $node._unregister(attr.ngNode);
             });
         }
     }
