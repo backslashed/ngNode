@@ -24,9 +24,7 @@ __HTML__
 __JS__
 
 ```js
-angular.module('myModule', ["ngNode"]);
-
-angular.module('myDirective', function($node) {
+angular.module('myModule').directive('myDirective', function($node) {
   function goHome() { /* actions */ }
   function showContact() { /* actions */ }
   
