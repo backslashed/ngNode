@@ -1,10 +1,10 @@
-(function(am) {
+(function(m) {
     /**
      * @module ngNode
      * @description $node service maintains and provides reference to DOM
      * elements in your templates.
      */
-    am('ngNode', []);
+    m('ngNode', []);
 
 
     /**
@@ -12,7 +12,7 @@
      * @description The $node service. Keeps and maintains registry, conforming to
      * scope lifecycle.
      */
-    am('ngNode').service('$node', function() {
+    m('ngNode').service('$node', function() {
         return {
             /**
              * @description Register an element on the $node service
@@ -39,7 +39,7 @@
      * @name ng-node
      * @description Directive used to bind DOM Nodes to the service
      */
-    am('ngNode').directive('ngNode', ['$node', function($node) {
+    m('ngNode').directive('ngNode', ['$node', function($node) {
         return {
             restrict: 'A',
 
