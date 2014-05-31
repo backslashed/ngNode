@@ -24,6 +24,7 @@ __HTML__
 __JS__
 
 ```js
+angular.module('myModule', ['ngNode']);
 angular.module('myModule').directive('myDirective', function($node) {
   /* ... */
   return {
