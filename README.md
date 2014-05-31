@@ -35,7 +35,7 @@ angular.module('myModule').directive('myDirective', function($node) {
     restrict: 'E',
     link: function() {
       $node.btnHome.on('click', goHome);
-      $node.htnContact.on('click', showContact);
+      $node.btnContact.on('click', showContact);
       $node.txtOutput.html('Hello world!');
     }
   }
