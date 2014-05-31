@@ -1,5 +1,6 @@
-ngNode
-======
+## ngNode
+#### Lightweight directive helper service
+
 
 Provides the $node helper service to directives for easy access to DOM Elements in their templates.
 
