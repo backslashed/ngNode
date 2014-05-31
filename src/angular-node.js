@@ -42,6 +42,7 @@
     m('ngNode').directive('ngNode', ['$node', function($node) {
         return {
             restrict: 'A',
+            priority: 999, // ng-repeat goes first at 1,000
             link: function(scope, elem, attr) {
                 $node._register(attr.ngNode, elem);
                 scope.$on('$destroy', function() {
