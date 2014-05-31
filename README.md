@@ -16,9 +16,12 @@ __HTML__
   <button ng-node="btnHome">
     <label>Home</label>
   </button>
+  
   <button ng-node="btnContact">
     <label>Contact</label>
   </button>
+  
+  <div class="output" ng-node="txtOutput"></div>
 </my-directive>
 ```
 
@@ -33,6 +36,7 @@ angular.module('myModule').directive('myDirective', function($node) {
     link: function() {
       $node.btnHome.on('click', goHome);
       $node.htnContact.on('click', showContact);
+      $node.txtOutput.html('Hello world!');
     }
   }
 });
