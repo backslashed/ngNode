@@ -42,7 +42,6 @@
     m('ngNode').directive('ngNode', ['$node', function($node) {
         return {
             restrict: 'A',
-
             link: function(scope, elem, attr) {
                 $node._register(attr.ngNode, elem);
                 scope.$on('$destroy', function() {
